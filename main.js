@@ -1,3 +1,6 @@
+import "./vendor/jquery.js";
+import { multiply } from "./lib/calc.js";
+
 function render(props, state) {
   console.log("libq render", props, state);
   $("main").html("");
@@ -6,7 +9,7 @@ function render(props, state) {
   for (let i = 0; i < props.cnt; i++) {
     const oprand = i + 1;
     const row = $("<p>");
-    row.text(`${oprand} x ${oprand} = ${oprand * oprand}`);
+    row.text(`${oprand} x ${oprand} = ${multiply(oprand, oprand)}`);
     console.log("libq row", row[0], row);
     $("main").append(row);
     console.log("libq inserted", oprand);
