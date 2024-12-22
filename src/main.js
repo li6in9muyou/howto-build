@@ -2,7 +2,7 @@ import "./main.css";
 import $ from "./vendor/jquery.js";
 import { multiply } from "./lib/calc.js";
 
-function render(props, state) {
+function MultiplyTable(props, state) {
   console.log("libq render", props, state);
   $("main").html("");
 
@@ -14,4 +14,4 @@ function render(props, state) {
   }
 }
 
-render({ cnt: 10 });
+MultiplyTable({ cnt: 10 });
