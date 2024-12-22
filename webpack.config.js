@@ -3,9 +3,10 @@ const path = require("path");
 
 module.exports = {
   mode: "development",
+  devtool: "source-map",
   entry: "./src/main.js",
   output: {
-    filename: "bundle.js",
+    filename: "[name].[hash:6].js",
     path: path.join(__dirname, "dist"),
     clean: true,
   },
