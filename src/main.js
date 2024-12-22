@@ -1,3 +1,4 @@
+import "./main.css";
 import $ from "./vendor/jquery.js";
 import { multiply } from "./lib/calc.js";
 
