@@ -1,4 +1,4 @@
-import "./vendor/jquery.js";
+import $ from "./vendor/jquery.js";
 import { multiply } from "./lib/calc.js";
 
 function render(props, state) {
