@@ -1,4 +1,5 @@
 import "./main.css";
+import { identity } from "lodash";
 import placeholder from "../assets/small-square-pic.png";
 import $ from "./vendor/jquery.js";
 import { multiply } from "./lib/calc.js";
@@ -10,7 +11,7 @@ function MultiplyTable(props) {
     const oprand = i + 1;
     const row = $("<p>");
     row.text(`${oprand} x ${oprand} = ${multiply(oprand, oprand)}`);
-    $("main").append(row);
+    $("main").append(identity(row));
   }
 }
 
@@ -22,3 +23,7 @@ function Icon(props) {
 Icon({ src: placeholder });
 
 MultiplyTable({ cnt: 3 });
+
+$("main").append(
+  $("<p>").text(`window._ is ${typeof window._}, ${window._.VERSION}`),
+);
