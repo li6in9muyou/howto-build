@@ -3,6 +3,7 @@ import { identity } from "lodash";
 import placeholder from "../assets/small-square-pic.png";
 import $ from "./vendor/jquery.js";
 import { multiply } from "./lib/calc.js";
+import { sample } from "./lib/utils.js";
 
 $("main").empty();
 
@@ -27,3 +28,8 @@ MultiplyTable({ cnt: 3 });
 $("main").append(
   $("<p>").text(`window._ is ${typeof window._}, ${window._.VERSION}`),
 );
+
+const alphabet = ["a", "b", "c", "x", "y", "z"];
+$("<h2>")
+  .text(sample(...alphabet))
+  .appendTo($("main"));

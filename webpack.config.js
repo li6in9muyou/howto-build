@@ -25,6 +25,18 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
       },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            cacheDirectory: true,
+            targets: "ie 11",
+            presets: [["@babel/preset-env"]],
+          },
+        },
+      },
     ],
   },
 };
